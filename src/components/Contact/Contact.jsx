@@ -1,10 +1,11 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './contact.scss';
 
 function Contact() {
 
   const form = useRef()
+  const [myMessage, setMyMessage] = useState(false)
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -14,6 +15,8 @@ function Contact() {
       }, (error) => {
         console.log(error.text);
       });
+    e.target.reset();
+    setMyMessage(true);
   }
 
   return (
@@ -27,6 +30,7 @@ function Contact() {
           <input type="text" name="email" placeholder="Email" />
           <textarea name="message" placeholder="Message" />
           <button type="submit">Send</button>
+          {myMessage && <span>Thanks, I'll reply as soon as possible 😃</span>}
         </form>
       </div>
     </div>
