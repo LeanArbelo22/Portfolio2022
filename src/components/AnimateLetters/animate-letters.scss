@@ -1,0 +1,15 @@
+@import "../../global.scss";
+
+.text-animate-hover {
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: $lightYellow;
+    }
+
+    &.active {
+        &:hover {
+            color: $lightBrown;
+        }
+    }
+}

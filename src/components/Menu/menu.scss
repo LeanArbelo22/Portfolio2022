@@ -1,0 +1,75 @@
+@import "../../global.scss";
+
+.menu {
+    width: 300px;
+    height: 100vh;
+    background-color: $darkBrown;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1.5s ease;
+
+    @include mobile{
+        width: 100vw;
+        right: -100vw;
+    }
+
+    ul {
+        font-size: 32px;
+        font-weight: 600;
+        list-style: none;
+        margin: 0;
+        color: $darkBrown; // if it's closing must be darkYellow here
+        font-family: 'Coolvetica', sans-serif;
+        width: 60%;
+
+
+        li {
+            margin-bottom: 30px;
+            text-transform: lowercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+
+            @include mobile{
+                opacity: 1;
+            }
+
+            a {
+                color: inherit;
+                font-size: inherit;
+                text-decoration: none;
+            }
+
+            &:hover {
+                text-transform: uppercase;
+                opacity: 1;
+            }
+        } 
+    }
+
+    &.active {
+        right: 0;
+        background-color: $darkYellow;
+
+        /* ul {
+            color: $darkBrown;
+        } */
+    }
+
+    span {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        color: inherit;
+        opacity: 0.8;
+        font-family: 'Coolvetica', sans-serif;
+    }
+
+}
