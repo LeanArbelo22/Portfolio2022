@@ -12,6 +12,10 @@
         flex: 1;
         overflow: hidden;
 
+        @include mobile{
+            flex: 0.5;
+        }
+
         img {
             height: 100%;
         }
@@ -29,6 +33,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: relative;
+
+        @include mobile{
+            justify-content: space-around;
+        }
 
         h2 {
             font-size: 30px;
@@ -85,6 +94,22 @@
                 font-size: 10px;
                 color: $softBrown;
                 font-weight: 500;
+            }
+
+        }
+
+        .social{
+            position: relative;
+            right: -11px;
+
+            a {
+                text-decoration: none;
+                color: $darkBrown;
+
+                .social-icon{
+                    font-size: 45px;
+                    margin-right: 15px;
+                }
             }
         }
     }

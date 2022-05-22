@@ -1,5 +1,8 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import './contact.scss';
 
 function Contact() {
@@ -32,6 +35,11 @@ function Contact() {
           <button type="submit">Send</button>
           {myMessage && <span>Thanks, I'll reply as soon as possible 😃</span>}
         </form>
+        <div className="social">
+            <a href="https://www.linkedin.com/in/leandro-arbelo-56ba46172/" taget="_blank" rel="noreferrer"><LinkedInIcon className="social-icon"/></a>
+            <a href="https://github.com/LeanArbelo22" taget="_blank" rel="noreferrer"><GitHubIcon className="social-icon"/></a>
+            <a href="https://api.whatsapp.com/send/?phone=5493515912166&text&app_absent=0" target="_blank" rel="noreferrer"><WhatsAppIcon className="social-icon"/></a>
+        </div>
       </div>
     </div>
   )
