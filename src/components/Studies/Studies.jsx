@@ -11,21 +11,24 @@ function Studies() {
       title: 'Frontend Developer',
       icon: 'assets/mobile.png',
       desc: 'UTN.BA Facultad Regional de Buenos Aires',
-      img: 'assets/frontend.png'
+      img: 'assets/frontend.png',
+      project: 'https://leanarbelo22.github.io/FROG-Proyecto/public/index.html'
     },
     {
       id: '2',
       title: 'FullStack Developer',
       icon: 'assets/mobile.png',
       desc: 'UTN.BA Facultad Regional de Buenos Aires',
-      img: 'assets/fullstack.png'
+      img: 'assets/fullstack.png',
+      project: 'https://frog-react-pwa.herokuapp.com/'
     },
     {
       id: '3',
       title: 'Bootcamp Fundamentos de la Programacion con Python',
       icon: 'assets/mobile.png',
       desc: 'CodigoFacilito',
-      img: 'assets/codigo-facilito.png'
+      img: 'assets/codigo-facilito.png',
+      project: 'https://github.com/LeanArbelo22/GOSH-Proyecto-CodigoFacilito'
     }
   ]
 
@@ -49,7 +52,7 @@ function Studies() {
                   </div>
                     <h2>{dataItem.title}</h2>
                     <p>{dataItem.desc}</p>
-                    <span>Project</span>
+                    <span><a href={dataItem.project} target="_blank" rel="noreferrer">Project</a></span>
                 </div>
               </div>
               <div className="right">

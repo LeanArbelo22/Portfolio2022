@@ -31,6 +31,10 @@
                 text-decoration: none;
                 color: inherit;
                 margin-right: 30px;
+
+                @include sm-mobile {
+                    font-size: 35px;
+                }
             }
 
             .item-container {
@@ -53,6 +57,11 @@
                 span {
                     font-size: 14px;
                     font-weight: 600;
+
+                    a {
+                        color: $darkYellow;
+                        text-decoration: none;
+                    }
                 }
             }
         }

@@ -8,7 +8,7 @@ function Presentation() {
     <div className='presentation' id='presentation'>
       <div className="left">
         <div className="wrapper">
-          <h2>Hi there, I'm</h2>
+          <h2>Welcome! I'm</h2>
           <h1>Leandro Arbelo</h1>
           <h3>Full Stack Developer / 
             <span>

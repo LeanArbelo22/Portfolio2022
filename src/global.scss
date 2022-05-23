@@ -8,7 +8,7 @@ $darkBrown: #1f1301;
 // FONT
 @font-face {
   font-family: "Coolvetica";
-  src: url("./assets/fonts/CoolveticaRg-Regular.woff2") format("woff2");
+  src: url("assets/fonts/CoolveticaRg-Regular.woff2") format("woff2");
 }
 
 // MIXIN
@@ -20,7 +20,7 @@ $darkBrown: #1f1301;
 }
 
 @mixin sm-mobile {
-  @media (max-width: 400px) {
+  @media (max-width: 425px) {
     @content;
   }
 }

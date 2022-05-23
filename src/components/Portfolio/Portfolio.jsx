@@ -18,10 +18,6 @@ function Portfolio() {
       title: 'React App'
     },
     {
-      id: 'static',
-      title: 'Static Web'
-    },
-    {
       id: 'python',
       title: 'Python'
     },
@@ -32,6 +28,10 @@ function Portfolio() {
     {
       id: 'cv',
       title: 'Curriculums'
+    },
+    {
+      id: 'static',
+      title: 'Static Web'
     }
   ];
 
@@ -59,28 +59,32 @@ function Portfolio() {
   }, [selected])
 
   return (
-    <div className='portfolio' id='portfolio'>
-      <h1>Porfolio</h1>
-      <ul>
-        {
-          list.map((item) => (
-            <PortfolioList 
-            title={item.title}
-            key={item.id}
-            active={selected === item.id}
-            setSelected={setSelected}
-            id={item.id} />
-          ))
-        }
-      </ul>
+    <div className="portfolio" id="portfolio">
+      <div className="top-list">  
+        <h1>Porfolio</h1>
+        <ul>
+          {
+            list.map((item) => (
+              <PortfolioList 
+              title={item.title}
+              key={item.id}
+              active={selected === item.id}
+              setSelected={setSelected}
+              id={item.id} />
+            ))
+          }
+        </ul>
+      </div>
 
       <div className="container">
         {
           data.map((dataItem) => (
+            <a href={dataItem.url}>
             <div className="item" key={dataItem.title}>
               <img src={dataItem.img} alt={dataItem.title} />
               <h3>{dataItem.title}</h3>
             </div>
+            </a>
           ))
         }
         

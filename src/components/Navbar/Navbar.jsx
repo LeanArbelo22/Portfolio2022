@@ -32,7 +32,7 @@ function Navbar({openMenu, setOpenMenu}) {
                 </a>
               <div className="item-container">
                 <CallIcon className="icon"/>
-                <span>+598 92804870</span>
+                <span><a href='tel:+59892804870'>+598 92804870</a></span>
               </div>
               <div className="item-container">
                 <MailIcon className="icon"/>
