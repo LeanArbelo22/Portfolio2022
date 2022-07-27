@@ -43,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "engines": {"node": "16.13.1", "npm": "8.10.0"}
+  "engines": {"node": "16.13.1", "npm": "8.1.2"}
 }
